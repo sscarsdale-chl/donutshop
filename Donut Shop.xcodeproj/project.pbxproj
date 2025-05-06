@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		266994302DC9367E0050BA30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 266994172DC9367D0050BA30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2669941E2DC9367D0050BA30;
+			remoteInfo = "Donut Shop";
+		};
+		2669943A2DC9367E0050BA30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 266994172DC9367D0050BA30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2669941E2DC9367D0050BA30;
+			remoteInfo = "Donut Shop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2669941F2DC9367D0050BA30 /* Donut Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donut Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2669942F2DC9367E0050BA30 /* Donut ShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Donut ShopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		266994392DC9367E0050BA30 /* Donut ShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Donut ShopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		266994212DC9367D0050BA30 /* Donut Shop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Donut Shop";
+			sourceTree = "<group>";
+		};
+		266994322DC9367E0050BA30 /* Donut ShopTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Donut ShopTests";
+			sourceTree = "<group>";
+		};
+		2669943C2DC9367E0050BA30 /* Donut ShopUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Donut ShopUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2669941C2DC9367D0050BA30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2669942C2DC9367E0050BA30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266994362DC9367E0050BA30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		266994162DC9367D0050BA30 = {
+			isa = PBXGroup;
+			children = (
+				266994212DC9367D0050BA30 /* Donut Shop */,
+				266994322DC9367E0050BA30 /* Donut ShopTests */,
+				2669943C2DC9367E0050BA30 /* Donut ShopUITests */,
+				266994202DC9367D0050BA30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		266994202DC9367D0050BA30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2669941F2DC9367D0050BA30 /* Donut Shop.app */,
+				2669942F2DC9367E0050BA30 /* Donut ShopTests.xctest */,
+				266994392DC9367E0050BA30 /* Donut ShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2669941E2DC9367D0050BA30 /* Donut Shop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266994432DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut Shop" */;
+			buildPhases = (
+				2669941B2DC9367D0050BA30 /* Sources */,
+				2669941C2DC9367D0050BA30 /* Frameworks */,
+				2669941D2DC9367D0050BA30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				266994212DC9367D0050BA30 /* Donut Shop */,
+			);
+			name = "Donut Shop";
+			packageProductDependencies = (
+			);
+			productName = "Donut Shop";
+			productReference = 2669941F2DC9367D0050BA30 /* Donut Shop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2669942E2DC9367E0050BA30 /* Donut ShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266994462DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut ShopTests" */;
+			buildPhases = (
+				2669942B2DC9367E0050BA30 /* Sources */,
+				2669942C2DC9367E0050BA30 /* Frameworks */,
+				2669942D2DC9367E0050BA30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				266994312DC9367E0050BA30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				266994322DC9367E0050BA30 /* Donut ShopTests */,
+			);
+			name = "Donut ShopTests";
+			packageProductDependencies = (
+			);
+			productName = "Donut ShopTests";
+			productReference = 2669942F2DC9367E0050BA30 /* Donut ShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		266994382DC9367E0050BA30 /* Donut ShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266994492DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut ShopUITests" */;
+			buildPhases = (
+				266994352DC9367E0050BA30 /* Sources */,
+				266994362DC9367E0050BA30 /* Frameworks */,
+				266994372DC9367E0050BA30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2669943B2DC9367E0050BA30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2669943C2DC9367E0050BA30 /* Donut ShopUITests */,
+			);
+			name = "Donut ShopUITests";
+			packageProductDependencies = (
+			);
+			productName = "Donut ShopUITests";
+			productReference = 266994392DC9367E0050BA30 /* Donut ShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		266994172DC9367D0050BA30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					2669941E2DC9367D0050BA30 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					2669942E2DC9367E0050BA30 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 2669941E2DC9367D0050BA30;
+					};
+					266994382DC9367E0050BA30 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 2669941E2DC9367D0050BA30;
+					};
+				};
+			};
+			buildConfigurationList = 2669941A2DC9367D0050BA30 /* Build configuration list for PBXProject "Donut Shop" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 266994162DC9367D0050BA30;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 266994202DC9367D0050BA30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2669941E2DC9367D0050BA30 /* Donut Shop */,
+				2669942E2DC9367E0050BA30 /* Donut ShopTests */,
+				266994382DC9367E0050BA30 /* Donut ShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2669941D2DC9367D0050BA30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2669942D2DC9367E0050BA30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266994372DC9367E0050BA30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2669941B2DC9367D0050BA30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2669942B2DC9367E0050BA30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266994352DC9367E0050BA30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		266994312DC9367E0050BA30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2669941E2DC9367D0050BA30 /* Donut Shop */;
+			targetProxy = 266994302DC9367E0050BA30 /* PBXContainerItemProxy */;
+		};
+		2669943B2DC9367E0050BA30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2669941E2DC9367D0050BA30 /* Donut Shop */;
+			targetProxy = 2669943A2DC9367E0050BA30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		266994412DC9367E0050BA30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		266994422DC9367E0050BA30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		266994442DC9367E0050BA30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Donut Shop/Donut_Shop.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		266994452DC9367E0050BA30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Donut Shop/Donut_Shop.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		266994472DC9367E0050BA30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-ShopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Donut Shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Donut Shop";
+			};
+			name = Debug;
+		};
+		266994482DC9367E0050BA30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-ShopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Donut Shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Donut Shop";
+			};
+			name = Release;
+		};
+		2669944A2DC9367E0050BA30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-ShopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Donut Shop";
+			};
+			name = Debug;
+		};
+		2669944B2DC9367E0050BA30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8R4Q8J4PC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clickherelabs.Donut-ShopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Donut Shop";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2669941A2DC9367D0050BA30 /* Build configuration list for PBXProject "Donut Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266994412DC9367E0050BA30 /* Debug */,
+				266994422DC9367E0050BA30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		266994432DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266994442DC9367E0050BA30 /* Debug */,
+				266994452DC9367E0050BA30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		266994462DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut ShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				266994472DC9367E0050BA30 /* Debug */,
+				266994482DC9367E0050BA30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		266994492DC9367E0050BA30 /* Build configuration list for PBXNativeTarget "Donut ShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2669944A2DC9367E0050BA30 /* Debug */,
+				2669944B2DC9367E0050BA30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 266994172DC9367D0050BA30 /* Project object */;
+}
