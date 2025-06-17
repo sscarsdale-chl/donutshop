@@ -23,6 +23,7 @@ struct ContentView: View {
     
     @State private var step1Complete: Bool = false
     @State private var step2Complete: Bool = false
+    @State private var step3Complete: Bool = false
     @State private var isTargeted: Bool = false
 
     // TODO: MAKE THE CLICKTAG TIED TO AN INPUT FIELD, PUT THE API KEY IN USERSTORAGE
@@ -206,12 +207,28 @@ struct ContentView: View {
                 
                 VStack {
                     HStack{
+
+                        ZStack {
+                            Circle()
+                                .fill(step3Complete ? Color.green : Color.black)
+                                .frame(width: 32, height: 32)
+                            Text("3")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }
+                        .padding()
+
                         Text("Files for Conversion:")
                             .foregroundColor(.dsPrimaryText)
                             .fontWeight(.bold)
                             .font(.headline)
                         
                         Spacer()
+
+                        Button("Generate HTML Preview") {
+                            generatePreview()
+                        }
+                        .padding()
                     }
                     .padding()
 
@@ -300,6 +317,170 @@ struct ContentView: View {
     
     // UTILITY FUNCTIONS
     
+    private func generatePreview() {
+        guard let selectedFolderURL = selectedFolderURL else {
+            errorMessage = "No folder selected"
+            return
+        }
+        
+        statusMessage = "Generating HTML preview..."
+        
+        // Get all directories in the root folder
+        let fileManager = FileManager.default
+        do {
+            let directoryContents = try fileManager.contentsOfDirectory(at: selectedFolderURL, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles])
+            
+            // Filter banner directories (format: 000x000)
+            let bannerDirs = directoryContents.filter { url in
+                var isDir: ObjCBool = false
+                if fileManager.fileExists(atPath: url.path, isDirectory: &isDir) && isDir.boolValue {
+                    let dirName = url.lastPathComponent
+                    return dirName.range(of: #"^\d+x\d+$"#, options: .regularExpression) != nil
+                }
+                return false
+            }
+            
+            if bannerDirs.isEmpty {
+                errorMessage = "No banner directories found"
+                statusMessage = nil
+                return
+            }
+            
+            // Collect banner data
+            var banners: [[String: Any]] = []
+            
+            for dirURL in bannerDirs {
+                let dirName = dirURL.lastPathComponent
+                
+                // Function to recursively find HTML files in directory and subdirectories
+                func findHTMLFilesRecursively(in directory: URL, baseDirName: String) {
+                    do {
+                        let contents = try fileManager.contentsOfDirectory(at: directory, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles])
+                        
+                        for url in contents {
+                            var isDir: ObjCBool = false
+                            fileManager.fileExists(atPath: url.path, isDirectory: &isDir)
+                            
+                            if isDir.boolValue {
+                                // Recursively search subdirectories
+                                findHTMLFilesRecursively(in: url, baseDirName: baseDirName)
+                            } else if url.pathExtension.lowercased() == "html" {
+                                // Found an HTML file
+                                let sizeParts = baseDirName.split(separator: "x").compactMap { Int($0) }
+                                if sizeParts.count == 2 {
+                                    // Calculate relative path from the selected folder
+                                    let relativePath = url.path.replacingOccurrences(of: selectedFolderURL.path, with: "")
+                                    // Remove leading slash if present
+                                    let cleanPath = relativePath.hasPrefix("/") ? String(relativePath.dropFirst()) : relativePath
+                                    
+                                    let banner: [String: Any] = [
+                                        "size": baseDirName,
+                                        "width": sizeParts[0],
+                                        "height": sizeParts[1],
+                                        "path": cleanPath,
+                                        "filename": url.lastPathComponent
+                                    ]
+                                    banners.append(banner)
+                                }
+                            }
+                        }
+                    } catch {
+                        print("Error reading directory contents: \(error.localizedDescription)")
+                    }
+                }
+                
+                // Start recursive search from the banner directory
+                findHTMLFilesRecursively(in: dirURL, baseDirName: dirName)
+            }
+            
+            if banners.isEmpty {
+                errorMessage = "No HTML files found in banner directories"
+                statusMessage = nil
+                return
+            }
+            
+            // Group banners by orientation
+            let verticalBanners = banners.filter { ($0["width"] as! Int) < 728 }
+            let verticalBannersSorted = verticalBanners.sorted { ($0["width"] as! Int) < ($1["width"] as! Int) }
+            let horizontalBanners = banners.filter { ($0["width"] as! Int) >= 728 }
+            let horizontalBannersSorted = horizontalBanners.sorted { ($0["width"] as! Int) < ($1["width"] as! Int) }
+            
+            // Get the name of the root folder for the title
+            let folderName = selectedFolderURL.lastPathComponent
+            
+            // Create HTML content
+            var html = """
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <title>\(folderName) Preview</title>
+              <style>
+                body { font-family: Arial, sans-serif; margin: 20px; padding: 0; background-color: white; }
+                h1 { color: #333; text-align: center; margin-bottom: 30px; }
+                .banner-section { margin-bottom: 40px; background-color: #f5f5f5; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                iframe { border: 1px solid #ccc; background-color: white; display: inline-block; vertical-align: top; margin: 0 10px; }
+                .row { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+                .col { padding: 10px; text-align: center; }
+                .horizontal-units { padding-bottom: 50px; }
+              </style>
+            </head>
+            <body>
+              <h1>\(folderName) Preview</h1>
+              
+              <div class="banner-section">
+                <div class="row">
+            """
+            
+            // Add vertical banners
+            for banner in verticalBannersSorted {
+                html += """
+                      <div class="col">
+                        <h3>\(banner["size"] as! String)</h3>
+                        <iframe src="\(banner["path"] as! String)" width="\(banner["width"] as! Int)" height="\(banner["height"] as! Int)" title="\(banner["size"] as! String) Banner"></iframe>
+                      </div>
+                """
+            }
+            
+            // Add horizontal banners in a column
+            if !horizontalBanners.isEmpty {
+                html += """
+                      <div class="col">
+                """
+                
+                for banner in horizontalBannersSorted {
+                    html += """
+                        <div class="horizontal-units">
+                          <h3>\(banner["size"] as! String)</h3>
+                          <iframe src="\(banner["path"] as! String)" width="\(banner["width"] as! Int)" height="\(banner["height"] as! Int)" title="\(banner["size"] as! String) Banner"></iframe>
+                        </div>
+                    """
+                }
+                
+                html += """
+                      </div>
+                """
+            }
+            
+            html += """
+                </div>
+              </div>
+            </body>
+            </html>
+            """
+            
+            // Write the HTML file
+            let outputFile = selectedFolderURL.appendingPathComponent("preview-generated.html")
+            
+            try html.write(to: outputFile, atomically: true, encoding: .utf8)
+            statusMessage = "Preview HTML file created successfully: preview-generated.html"
+            
+        } catch {
+            errorMessage = "Error generating preview: \(error.localizedDescription)"
+            statusMessage = nil
+        }
+    }
+
     private func handleFolderSelection(result: Result<[URL], Error>) {
         switch result {
         case .success(let urls):
@@ -319,7 +500,7 @@ struct ContentView: View {
             errorMessage = "Error selecting folder: \(error.localizedDescription)"
         }
     }
-    
+
     
     private func findHTMLFiles(in directory: URL) {
         isSearching = true
